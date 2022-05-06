@@ -1,0 +1,386 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/****************************/
+/*-------Layout---------*/
+/****************************/
+
+body {
+  font-size: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+nav {
+  background-color: #4285f4;
+  display: flex;
+  box-shadow: 0 5px 10px rgba(0,0,0,.3);
+  padding: 2em
+}
+
+.menu-box {
+  padding: 0 4em 0 3em;;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-box > div {
+    width: 2em;
+    height: .18em;
+    background-color: white;
+    margin: .22em 0;
+}
+
+.skyline {
+  position: relative;
+  z-index: -1;
+  width: 94%;
+  height: 35em;
+  margin: 0 auto;
+  background-position: center bottom; 
+  background-size: auto 50em;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/9a/Toronto_Ontario.jpg");
+ background-repeat: no-repeat;
+  opacity: 0.9;
+}
+
+.flight, .popular, .container, footer > * {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.popular {
+  margin-bottom: 1em;
+}
+
+.popular a {
+  float: right;
+}
+
+.container {
+  display: flex;
+  margin-bottom: 4em;
+}
+
+.top-cities {
+  flex: 1 1 auto;
+}
+
+#map {
+  width: 50%;
+  flex: 1 0 auto;
+  margin: 1em 1em 1em 0;
+/*   border: 1px solid black; */
+  background-color: rgba(0,0,0,.15);
+}
+
+.rome, .paris, .croatia {
+  display: flex;
+  background-color: white;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.1);
+  margin: 1em;
+}
+
+.rome img, .croatia img, .paris img {
+  width:46%;
+  height: 46%;
+  padding: 0 1em 0 0;
+  margin: 0;
+}
+
+.flight {
+  background-color: #3367d6;
+  box-shadow: 0 5px 10px rgba(0,0,0,.3);
+  position: relative;
+  top: -9.5em;
+  z-index: 1;
+}
+
+
+button {
+  background-color: #ff4081;
+  display: block;
+  padding: .5em .5em;
+  margin: 0 auto;
+  line-height: 2em;
+  border: none;
+  border-radius: 1.4em;
+  box-shadow: 0 .3em .6em rgba(0,0,0,.4);
+  position: relative;
+  bottom: -1em;
+}
+
+button div {
+  display: inline;
+  padding-right: 1em;
+}
+
+button:hover {
+  box-shadow: 0 .45em .8em rgba(0,0,0,.4);
+}
+
+button i {
+  padding-right: .1em;
+  vertical-align: middle;
+}
+
+.popular * {
+  display: inline;
+  padding: 0 1em;
+}
+
+.flight_parameters, .flight_search {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flight_parameters {
+  padding: 2em 0 0 3em;
+}
+
+.flight select, footer label, footer select {
+  padding: .5em .5em;
+  margin: 0 .5em;
+}
+
+.flight_parameters div:hover {
+  background-color: rgba(255,255,255,.15);
+  border-radius: .2em;
+}
+
+.flight_parameters select {
+  border: none;
+}
+
+.flight_search {
+  padding: 1.5em 0 0 3em;
+}
+
+.flight_search div {
+  flex: 1 1 auto;
+}
+
+input[type="text"], input[type="date"] {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: .2em;
+  padding: 1em;
+}
+
+.details {
+  width: 100%;
+  padding: 1em;
+}
+
+.nonstop span, .connecting span {
+  float: right;
+}
+
+select {
+  background-color: transparent;
+  border: none;
+}
+
+footer {
+  background-color: white;
+  padding-bottom: 2em;
+}
+
+footer form {
+  padding: 2em 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer-select {
+  margin: 0 0 0 1em;
+  border: 1px solid transparent;
+}
+
+.footer-select:hover {
+  border: 1px solid rgba(0,0,0,.1);
+}
+
+footer section div {
+  padding: 1.5em 0 0 0;
+}
+
+.help_links span {
+  padding-right: 1em;
+}
+
+.follow {
+  margin-left: auto;
+  padding-right: .8em;
+}
+
+footer i {
+  padding: 0 .1em;
+}
+
+
+/****************************/
+/*-------Typography---------*/
+/****************************/
+
+body {
+  font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 2.4em;
+  color: white;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.4em;
+  color: rgba(0,0,0,.9);
+}
+
+p {
+  font-size: 1.2em;
+}
+
+.popular a {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #3367d6;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+button {
+  color: white;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+button i {
+font-size: 1.6em !important;  
+}
+
+.flight select, footer label, footer select {
+  font-size: 1.4em;
+}
+
+.flight select option {
+  color: black;
+}
+
+.flight input {
+  font-size: 1.6em;
+}
+
+.flight input, .flight select {
+  color: white;
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+input[id="destination"] {
+  color: rgba(255,255,255, .6);
+}
+
+.details {
+  line-height: 2em;
+  font-size: 1.3em;
+  color: rgba(0,0,0,.9);
+}
+
+/* .details h3 {
+  font-size: 1.4em;
+} */
+
+.dates {
+  color: rgba(0,0,0,.5);
+}
+
+.nonstop span, .connecting span {
+  font-weight: bold;
+}
+
+.nonstop span {
+  color: rgba(0,0,0,.7);
+}
+
+.connecting span {
+  color: #0f9d58;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.footer-select {
+  background-color: rgba(0,0,0,.04);
+  border-radius: .2em;
+  color: rgba(0,0,0,.5);
+  font-size: .9em;
+}
+
+footer select {
+  color: rgba(0,0,0,.9);
+}
+
+form span {
+  font-size: 1.6em;
+}
+
+footer div, .follow, footer i {
+  font-size: 1.3em;
+  color: rgba(0,0,0,.5);
+}
+
+.help_links {
+  font-weight: bold;
+  color: rgba(0,0,0,.6);
+}
+
+footer i {
+  font-size: 2.2em;
+}
